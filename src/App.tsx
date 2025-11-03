@@ -95,7 +95,7 @@ const MFG_POLICY: Record<string, any> = {
 const MODELS: Record<string, { fork: string[]; shock: string[] }> = {
   FOX: {
     fork: ["32","34", "36", "38", "40"],
-    shock: ["Float", "DPX2", "Float X", "DHX", "DHX2"],
+    shock: ["Float", "Float X", "DPX2", "DHX", "DHX2"],
   },
   ROCKSHOX: {
     fork: ["SID", "Pike", "Lyrik", "Zeb"],
@@ -338,50 +338,50 @@ export default function SSC() {
             <h3 className="text-orange-300 font-bold text-lg mb-2">שאלות נפוצות</h3>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">הבולם כבר לא טופל מעל שנה והוא עדיין מרגיש טוב, לטפל?</summary>
-              <p className="text-orange-200/80 text-[20px] mt-1 leading-relaxed">כן. גם אם הבולם מרגיש תקין, השמנים והאטמים מתיישנים עם הזמן ומאבדים מהיעילות שלהם. מומלץ לבצע טיפול לפחות פעם בשנה כדי למנוע שחיקה יקרה ונזקים עתידיים.</p>
+              <p className="text-orange-200/80 text-[18px] mt-1 leading-relaxed">כן. גם אם הבולם מרגיש תקין, השמנים והאטמים מתיישנים עם הזמן ומאבדים מהיעילות שלהם. מומלץ לבצע טיפול לפחות פעם בשנה כדי למנוע שחיקה יקרה ונזקים עתידיים.</p>
             </details>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">איך אדע שהבולם צריך טיפול אם אני לא מרגיש שינוי?</summary>
-              <p className="text-orange-200/80 text-sm mt-1 leading-relaxed">לא תמיד מרגישים ירידה בביצועים מיד — הגוף מתרגל. סימנים: פחות רגישות למהמורות קטנות, חוסר יציבות במהירות, נקישות בתחילת מהלך, איבוד לחץ אוויר.</p>
+              <p className="text-orange-200/80 text-[18px] mt-1 leading-relaxed">לא תמיד מרגישים ירידה בביצועים מיד — הגוף מתרגל. סימנים: פחות רגישות למהמורות קטנות, חוסר יציבות במהירות, נקישות בתחילת מהלך, איבוד לחץ אוויר.</p>
             </details>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">כמה זמן לוקח טיפול במעבדה?</summary>
-              <p className="text-orange-200/80 text-sm mt-1 leading-relaxed">בדרך כלל 1–3 ימי עסקים, בהתאם לעומס ולדגם. בדחוף אפשר לקצר בתיאום מראש.</p>
+              <p className="text-orange-200/80 text-[18px] mt-1 leading-relaxed">בדרך כלל 1–3 ימי עסקים, בהתאם לעומס ולדגם. בדחוף אפשר לקצר בתיאום מראש.</p>
             </details>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">מה קורה אם מתעלמים מטיפול תקופתי?</summary>
-              <p className="text-orange-200/80 text-sm mt-1 leading-relaxed">בלאי מואץ של אטמים/בושינגים ופגיעה בדפנות פנימיות. הזנחה ממושכת עלולה להוביל לשיפוץ יקר במקום טיפול שגרתי.</p>
+              <p className="text-orange-200/80 text-[18px] mt-1 leading-relaxed">בלאי מואץ של אטמים/בושינגים ופגיעה בדפנות פנימיות. הזנחה ממושכת עלולה להוביל לשיפוץ יקר במקום טיפול שגרתי.</p>
             </details>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">אפשר לבצע טיפול לבד בבית?</summary>
-              <p className="text-orange-200/80 text-sm mt-1 leading-relaxed">כן, חלק מהטיפולים הבסיסיים אפשריים — אבל לא מומלץ לרוב הרוכבים ולא בהכרח משתלם: הסיכוי לנזק יקר גדול יותר מהחיסכון.</p>
+              <p className="text-orange-200/80 text-[18px] mt-1 leading-relaxed">כן, חלק מהטיפולים הבסיסיים אפשריים — אבל לא מומלץ לרוב הרוכבים ולא בהכרח משתלם: הסיכוי לנזק יקר גדול יותר מהחיסכון.</p>
             </details>
 
             <h3 className="text-orange-300 font-bold text-lg mt-5 mb-2">למה 50/100 שעות אצל RockShox?</h3>
-            <ul className="text-orange-200/90 text-sm leading-relaxed list-disc pr-5 space-y-1">
+            <ul className="text-orange-200/90 text-[16px] leading-relaxed list-disc pr-5 space-y-1">
               <li>שמן בלוארס מאבד צמיגות סביב 40–60 שעות → עולה חיכוך (סטיקשן).</li>
               <li>שומן/אבק בבושינגים ואטמים → שחיקה מוקדמת.</li>
               <li>שמן דמפר מתחמצן/סופח לחות סביב 80–120 שעות → שינוי שיכוך.</li>
               <li>מבוסס גם על נתוני אחריות ובדיקות שטח.</li>
             </ul>
-            <div className="mt-3 text-xs text-orange-300/80">רכיבה אגרסיבית/בוץ/גשם? מומלץ לקצר מרווחים.</div>
+            <div className="mt-3 text-ms text-orange-300/80">רכיבה אגרסיבית/בוץ/גשם? מומלץ לקצר מרווחים.</div>
 
             <h3 className="text-orange-300 font-bold text-lg mt-5 mb-2">Öhlins – עקרונות תחזוקה</h3>
-            <ul className="text-orange-200/90 text-sm leading-relaxed list-disc pr-5 space-y-1">
+            <ul className="text-orange-200/90 text-[16px] leading-relaxed list-disc pr-5 space-y-1">
               <li>מזלג: ניקוי רגליים תחתונות ~50 שעות, טיפול מלא ~100 שעות או שנה.</li>
               <li>בולם: שירות קפיץ אוויר ~100 שעות, שירות דמפר ~100 שעות או עד שנתיים.</li>
               <li>מטרה: לשמור על אטימה, יציבות שמן ושיכוך עקבי.</li>
             </ul>
 
-            <h3 className="text-orange-300 font-bold text-lg mt-5 mb-2">FOX – למה 125 שעות?</h3>
-            <ul className="text-orange-200/90 text-sm leading-relaxed list-disc pr-5 space-y-1">
+            <h3 className="text-orange-300 font-bold text-lg mt-5 mb-2">FOX – למה 125 שעות או שנה?</h3>
+            <ul className="text-orange-200/90 text-[16px] leading-relaxed list-disc pr-5 space-y-1">
               <li>125 שעות ≈ סף בו יורדת יציבות שמן הדמפר והאטמים מתייבשים.</li>
               <li>ההמלצה הרשמית: "125 שעות או שנה — המוקדם מביניהם".</li>
               <li>ניקוי חיצוני עדין מומלץ אחרי כל רכיבה.</li>
             </ul>
 
             <h3 className="text-orange-300 font-bold text-lg mt-5 mb-2">PUSH – למה לפי זמן?</h3>
-            <ul className="text-orange-200/90 text-sm leading-relaxed list-disc pr-5 space-y-1">
+            <ul className="text-orange-200/90 text-[16px] leading-relaxed list-disc pr-5 space-y-1">
               <li>התיישנות שמנים ואטמים מתרחשת גם ללא רכיבה.</li>
               <li>לכן ההמלצה: טיפול מלא אחת לשנה (בשימוש אגרסיבי: 6–9 חודשים).</li>
             </ul>
@@ -451,7 +451,7 @@ export default function SSC() {
 
             {/* Riding style */}
             <div className="order-4 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">סגנון רכיבה</label>
+              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">בחר סגנון רכיבה</label>
               <select
                 className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
                 value={style}
@@ -467,7 +467,7 @@ export default function SSC() {
 
             {/* Rider level */}
             <div className="order-5 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">רמת רכיבה</label>
+              <label className="block text-lg text-orange-300 mb-2 text-center font-bold"> בחר רמת רכיבה</label>
               <select
                 className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
                 value={ridingLevel}
@@ -500,7 +500,7 @@ export default function SSC() {
 
             {/* Bike weight */}
             <div className="order-7 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">משקל אופניים (ק"ג)</label>
+              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">בחר משקל אופניים (ק"ג)</label>
               <input
                 type="number"
                 min={8}
@@ -515,7 +515,7 @@ export default function SSC() {
 
             {/* Rider weight */}
             <div className="order-6 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">משקל רוכב (ק"ג)</label>
+              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">בחר משקל רוכב (ק"ג)</label>
               <input
                 type="number"
                 min={35}
