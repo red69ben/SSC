@@ -95,7 +95,7 @@ const MFG_POLICY: Record<string, any> = {
 const MODELS: Record<string, { fork: string[]; shock: string[] }> = {
   FOX: {
     fork: ["34", "36", "38", "40"],
-    shock: ["Float X", "DHX", "DHX3", "DHX2"],
+    shock: ["Float", "Float X", "DHX", "DHX2"],
   },
   ROCKSHOX: {
     fork: ["SID", "Pike", "Lyrik", "Zeb"],
@@ -116,7 +116,7 @@ const MODEL_OFFSETS_KM: Record<string, number> = {
   "Float X": -50,
   
   DHX: -80,
-  DHX3: -80,
+  Float: -80,
   DHX2: -120,
   Deluxe: -40,
   "Super Deluxe": -80,
