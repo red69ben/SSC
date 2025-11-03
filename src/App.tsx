@@ -392,33 +392,31 @@ export default function SSC() {
               <div className="flex items-center justify-between mb-2"><span className="text-xs px-2 py-0.5 rounded-full bg-orange-500/15 border border-orange-500/40">שלב 1</span><span className="text-[11px] text-orange-300/70">בחר אחת</span></div><label className="block text-lg text-orange-300 mb-2 text-center font-bold">סוג מוצר</label>
               <div className="flex gap-2 justify-center">
                 <motion.button
-                  type="button"
-                  whileHover={{ y: -1 }}
+                 type="button"
+                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => { setProductType("fork"); }}
-                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${{
-                    }${'' if True else ''}
-                    productType === "fork"
-                      ? "border-orange-500 bg-orange-500/10 text-white"
-                      : "border-orange-500/30 hover:border-orange-500/60"
-                  }`}
+                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${
+    productType === "fork"
+      ? "border-orange-500 bg-orange-500/10 text-white"
+      : "border-orange-500/30 hover:border-orange-500/60"
+  }`}}`}
                 >
                   מזלג
                 </motion.button>
                 <motion.button
-                  type="button"
+                 type="button"
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => { setProductType("shock"); }}
-                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${{
-                    }${'' if True else ''}
-                    productType === "shock"
-                      ? "border-orange-500 bg-orange-500/10 text-white"
-                      : "border-orange-500/30 hover:border-orange-500/60"
-                  }`}
-                >
-                  בולם אחורי
-                </motion.button>
+  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${
+    productType === "shock"
+      ? "border-orange-500 bg-orange-500/10 text-white"
+      : "border-orange-500/30 hover:border-orange-500/60"
+  }`}
+>
+  בולם אחורי
+</motion.button>
               </div>
                         </div>
 
