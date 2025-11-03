@@ -95,7 +95,7 @@ const MFG_POLICY: Record<string, any> = {
 const MODELS: Record<string, { fork: string[]; shock: string[] }> = {
   FOX: {
     fork: ["32","34", "36", "38", "40"],
-    shock: ["Float", "Dpx2", "Float X", "DHX", "DHX2"],
+    shock: ["Float", "DPX2", "Float X", "DHX", "DHX2"],
   },
   ROCKSHOX: {
     fork: ["SID", "Pike", "Lyrik", "Zeb"],
@@ -338,7 +338,7 @@ export default function SSC() {
             <h3 className="text-orange-300 font-bold text-lg mb-2">שאלות נפוצות</h3>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">הבולם כבר לא טופל מעל שנה והוא עדיין מרגיש טוב, לטפל?</summary>
-              <p className="text-orange-200/80 text-sm mt-1 leading-relaxed">כן. גם אם הבולם מרגיש תקין, השמנים והאטמים מתיישנים עם הזמן ומאבדים מהיעילות שלהם. מומלץ לבצע טיפול לפחות פעם בשנה כדי למנוע שחיקה יקרה ונזקים עתידיים.</p>
+              <p className="text-orange-200/80 text-[20px] mt-1 leading-relaxed">כן. גם אם הבולם מרגיש תקין, השמנים והאטמים מתיישנים עם הזמן ומאבדים מהיעילות שלהם. מומלץ לבצע טיפול לפחות פעם בשנה כדי למנוע שחיקה יקרה ונזקים עתידיים.</p>
             </details>
             <details className="mb-3">
               <summary className="cursor-pointer text-orange-200 font-semibold">איך אדע שהבולם צריך טיפול אם אני לא מרגיש שינוי?</summary>
