@@ -301,8 +301,8 @@ export default function SSC() {
           <motion.div initial={{ y: -12, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.4 }}>
             
           </motion.div>
-          <motion.div
-  className="text-sm text-orange-300/80 hidden sm:block text-center"
+         <motion.div
+  className="text-sm text-orange-300/80 hidden sm:block text-left"
   initial={{ y: -12, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.4, delay: 0.05 }}
