@@ -396,7 +396,7 @@ export default function SSC() {
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => { setProductType("fork"); }}
-                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "fork" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`
+                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "fork" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`}
                 >
                   מזלג
                 </motion.button>
@@ -405,7 +405,7 @@ export default function SSC() {
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => { setProductType("shock"); }}
-                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "shock" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`
+                  className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "shock" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`}
                 >
                   בולם אחורי
                 </motion.button>
