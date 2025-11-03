@@ -95,7 +95,7 @@ const MFG_POLICY: Record<string, any> = {
 const MODELS: Record<string, { fork: string[]; shock: string[] }> = {
   FOX: {
     fork: ["32","34", "36", "38", "40"],
-    shock: ["Dpx2", "Float", "Float X", "DHX", "DHX2"],
+    shock: ["Float", "Dpx2", "Float X", "DHX", "DHX2"],
   },
   ROCKSHOX: {
     fork: ["SID", "Pike", "Lyrik", "Zeb"],
@@ -134,8 +134,8 @@ const MODEL_OFFSETS_KM: Record<string, number> = {
 const SHOCK_PIGGYBACK: Record<string, boolean> = {
   "Float X": true,
   DHX: true,
-  DPX2: false,
   Float: false,
+  DPX2: true,
   DHX2: true,
   Deluxe: false,
   "Super Deluxe": true,
