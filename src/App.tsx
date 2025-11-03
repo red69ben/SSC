@@ -284,8 +284,8 @@ export default function SSC() {
 
   // Build WhatsApp message & URL for direct booking (computed in parent)
   const typeHe = productType === "fork" ? "מזלג" : "בולם אחורי";
-  const msg = `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe}).
-מתי הולך להגיע?`;
+  const msg = `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe})אשמח לקבוע טיפול 
+  `;
   const waUrl = `https://wa.me/972522567888?text=${encodeURIComponent(msg)}`;
 
   return (
@@ -398,7 +398,8 @@ export default function SSC() {
                   onClick={() => { setProductType("fork"); }}
                   className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "fork" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`}
                 >
-                  מזלג
+                 אורן
+                
                 </motion.button>
                 <motion.button
                   type="button"
@@ -407,7 +408,7 @@ export default function SSC() {
                   onClick={() => { setProductType("shock"); }}
                   className={`px-5 py-3 rounded-2xl border-2 transition hover:bg-orange-500/20 active:scale-95 ${productType === "shock" ? "border-orange-500 bg-orange-500/10 text-white" : "border-orange-500/30 hover:border-orange-500/60"}`}
                 >
-                  בולם אחורי
+                  בן
                 </motion.button>
               </div>
                         </div>
