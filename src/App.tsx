@@ -134,7 +134,7 @@ const MODEL_OFFSETS_KM: Record<string, number> = {
 const SHOCK_PIGGYBACK: Record<string, boolean> = {
   "Float X": true,
   DHX: true,
-  DPX2: true,
+  DPX2: false,
   Float: false,
   DHX2: true,
   Deluxe: false,
