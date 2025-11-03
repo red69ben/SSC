@@ -116,6 +116,7 @@ const MODEL_OFFSETS_KM: Record<string, number> = {
   "Float X": -50,
   
   DHX: -80,
+  DHX3: -80,
   DHX2: -120,
   Deluxe: -40,
   "Super Deluxe": -80,
