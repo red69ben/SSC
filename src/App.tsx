@@ -178,7 +178,7 @@ function ResultBox({ mfgHoursText, mfgTimeText, personalKm, priceNis, whatsappUr
         <div className="pt-2">
           <div className="text-xs text-orange-300/80 font-semibold">מחיר טיפול משוער:</div>
           <div className="text-xl sm:text-2xl font-extrabold text-white leading-snug">₪{formatNumber(priceNis)}</div>
-          <div className="text-[16px] text-orange-300/70 mt-0.5">* לא נגבים דמי פירוק והרכבה</div>
+          <div className="text-[26px] text-orange-300/70 mt-0.5">* לא נגבים דמי פירוק והרכבה</div>
         </div>
       </div>
     </motion.div>
