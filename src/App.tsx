@@ -170,15 +170,15 @@ function ResultBox({ mfgHoursText, mfgTimeText, personalKm, priceNis, whatsappUr
           )}
         </div>
         <div className="pt-1">
-          <div className="text-xs text-orange-300/80 font-semibold">המלצה משוקללת על פי נתוני רוכב:</div>
+          <div className="text-[20px] text-orange-300/80 font-semibold">המלצה משוקללת על פי נתוני רוכב:</div>
           <div className="text-2xl sm:text-3xl font-extrabold font-[Assistant] text-white leading-snug tracking-wide">
             ~{formatNumber(personalKm)} ק"מ
           </div>
         </div>
         <div className="pt-2">
-          <div className="text-[26px] text-orange-300/80 font-semibold">מחיר טיפול משוער:</div>
+          <div className="text-[20px] text-orange-300/80 font-semibold">מחיר טיפול משוער:</div>
           <div className="text-xl sm:text-2xl font-extrabold text-white leading-snug">₪{formatNumber(priceNis)}</div>
-          <div className="text-[26px] text-orange-300/70 mt-0.5">* פירוק והרכבה ללא עלות נוספת</div>
+          <div className="text-[20px] text-orange-300/70 mt-0.5">* פירוק והרכבה ללא עלות נוספת</div>
         </div>
       </div>
     </motion.div>
