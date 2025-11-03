@@ -284,7 +284,7 @@ export default function SSC() {
 
   // Build WhatsApp message & URL for direct booking (computed in parent)
   const typeHe = productType === "fork" ? "מזלג" : "בולם אחורי";
-  const msg = `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe})אשמח לקבוע טיפול 
+  const msg = `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe}) אשמח לקבוע טיפול 
   `;
   const waUrl = `https://wa.me/972522567888?text=${encodeURIComponent(msg)}`;
 
