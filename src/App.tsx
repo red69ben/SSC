@@ -552,7 +552,7 @@ export default function SSC() {
     rel="noopener noreferrer"
     className="mt-3 inline-block px-7 py-3 rounded-2xl border-2 border-orange-500/90 text-white text-lg font-bold font-[Assistant] tracking-wide bg-gradient-to-r from-orange-500/20 to-transparent hover:border-orange-400 hover:from-orange-500/30 hover:scale-[1.02] active:scale-95 transition"
   >
-    קבע לי טיפול בולמים
+    קבע לי טיפול בולמים 
   </a>
 </div>
           </form>
