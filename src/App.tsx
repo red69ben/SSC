@@ -522,7 +522,7 @@ export default function SSC() {
                 value={riderKg}
                 onChange={(e) => setRiderKg(Number(e.target.value))}
                 className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
-                placeholder="0"
+                placeholder="5"
               />
             </div>
 
