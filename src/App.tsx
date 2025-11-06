@@ -496,20 +496,25 @@ export default function SSC() {
               </div>
             </div>
 
-            {/* Bike weight */}
-            <div className="order-7 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">בחר משקל אופניים (ק"ג)</label>
-              <input
-                type="number"
-                min={8}
-                max={35}
-                step={0.1}
-                value={bikeKg}
-                onChange={(e) => setBikeKg(Number(e.target.value))}
-                className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
-                placeholder="15"
-              />
-            </div>
+           {/* Bike weight */}
+<div className="order-7 lg:col-span-3">
+  <label className="block text-lg text-orange-300 mb-2 text-center font-bold">
+    בחר משקל אופניים (ק"ג)
+  </label>
+  <input
+    type="number"
+    min={8}
+    max={35}
+    step={0.1}
+    value={bikeKg === null || bikeKg === undefined ? "" : bikeKg}
+    onChange={(e) => {
+      const val = e.target.value;
+      setBikeKg(val === "" ? null : Number(val));
+    }}
+    className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
+    placeholder="15"
+  />
+</div>
 
            {/* Rider weight */}
 <div className="order-6 lg:col-span-3">
