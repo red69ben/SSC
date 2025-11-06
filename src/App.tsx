@@ -197,6 +197,9 @@ export default function SSC() {
   const [bikeKg, setBikeKg] = useState<number>(null);
   const [riderKg, setRiderKg] = useState<number>(null);
   const [kmSince, setKmSince] = useState<number>(0);
+  const [custName, setCustName] = useState<string>("");
+const [custPhone, setCustPhone] = useState<string>("");
+
   // Touched flags for badges (show only after explicit user interaction)
       
   // Keep model list in sync with selected brand
