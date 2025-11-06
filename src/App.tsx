@@ -193,8 +193,8 @@ export default function SSC() {
   const [model, setModel] = useState<string>(MODELS["FOX"].fork[0]);
   const [style, setStyle] = useState<string>("Trail – טרייל");
   const [ridingLevel, setRidingLevel] = useState<string>("חובבן");
-  const [bikeKg, setBikeKg] = useState<number>(15);
-  const [riderKg, setRiderKg] = useState<number>(80);
+  const [bikeKg, setBikeKg] = useState<number>(null);
+  const [riderKg, setRiderKg] = useState<number>(null);
   const [kmSince, setKmSince] = useState<number>(0);
 
   // Touched flags for badges (show only after explicit user interaction)
