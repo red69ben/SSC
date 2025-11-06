@@ -512,7 +512,7 @@ export default function SSC() {
       setBikeKg(val === "" ? null : Number(val));
     }}
     className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
-    placeholder="15"
+
   />
 </div>
 
