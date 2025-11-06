@@ -160,8 +160,10 @@ function ResultBox({ mfgHoursText, mfgTimeText, personalKm, priceNis, whatsappUr
       transition={{ duration: 0.3 }}
     >
       <div className="space-y-3 text-center">
+        <div className="text-[20px] text-white/90 mt-0.5">* תוצאת המחשבון</div>
+
         <div>
-          <div className="text-xs text-orange-300/80 font-semibold">המלצת יצרן:</div>
+          <div className="text-[20px] text-orange-300/80 font-semibold">המלצת יצרן:</div>
           {mfgHoursText && (
             <div className="text-sm sm:text-base font-bold text-white/90 leading-snug" dir="rtl">{mfgHoursText}</div>
           )}
