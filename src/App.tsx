@@ -197,7 +197,6 @@ export default function SSC() {
   const [bikeKg, setBikeKg] = useState<number>(null);
   const [riderKg, setRiderKg] = useState<number>(null);
   const [kmSince, setKmSince] = useState<number>(0);
-
   // Touched flags for badges (show only after explicit user interaction)
       
   // Keep model list in sync with selected brand
@@ -289,9 +288,21 @@ export default function SSC() {
 
   // Build WhatsApp message & URL for direct booking (computed in parent)
   const typeHe = productType === "fork" ? "מזלג" : "בולם אחורי";
-  const msg = `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe}) אשמח לקבוע טיפול 
-  `;
-  const waUrl = `https://wa.me/972522567888?text=${encodeURIComponent(msg)}`;
+
+const msg =
+  `היי, אני מעוניין לקבוע טיפול לבולם מסוג ${brand} דגם ${model} (${typeHe}).` +
+  `\nשם: ${custName.trim() || "לא צוין"}` +
+  `\nטלפון: ${phoneDigits || "לא צוין"}` +
+  `\nנשלח דרך SSC – ShocKIng Service Calculator`;
+
+const waUrl = `https://wa.me/972522567888?text=${encodeURIComponent(msg)}`;
+
+// --- Booking form validation ---
+const phoneDigits = (custPhone || "").replace(/\D/g, "");
+const isPhoneValid = /^05\d{8}$/.test(phoneDigits);
+const isNameValid = (custName || "").trim().length >= 2;
+
+const canSubmit = isNameValid && isPhoneValid;
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen w-full bg-[#0c0d0d] text-orange-500 ">
@@ -546,14 +557,57 @@ export default function SSC() {
                 priceNis={result.servicePrice}
                 whatsappUrl={waUrl}
               />
-  <a
-    href={waUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-3 inline-block px-7 py-3 rounded-2xl border-2 border-orange-500/90 text-white text-lg font-bold font-[Assistant] tracking-wide bg-gradient-to-r from-orange-500/20 to-transparent hover:border-orange-400 hover:from-orange-500/30 hover:scale-[1.02] active:scale-95 transition"
-  >
-    קבע לי טיפול בולמים 
-  </a>
+              {/* Booking details (name & phone) */}
+<div className="mt-3 grid grid-cols-1 gap-3">
+  {/* Name */}
+  <div>
+    <label className="block text-lg text-orange-300 mb-2 text-center font-bold">שם מלא</label>
+    <input
+      type="text"
+      inputMode="text"
+      value={custName}
+      onChange={(e) => setCustName(e.target.value)}
+      className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
+      
+      dir="rtl"
+    />
+    {!isNameValid && custName !== "" && (
+      <div className="mt-1 text-sm text-red-300 text-center">נא להזין שם באורך 2 תווים ומעלה</div>
+    )}
+  </div>
+
+  {/* Phone */}
+  <div>
+    <label className="block text-lg text-orange-300 mb-2 text-center font-bold">מספר טלפון</label>
+    <input
+      type="tel"
+      inputMode="tel"
+      value={custPhone}
+      onChange={(e) => setCustPhone(e.target.value)}
+      className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
+      placeholder="05X-XXXXXXX"
+      dir="ltr"
+    />
+    {!isPhoneValid && custPhone !== "" && (
+      <div className="mt-1 text-sm text-red-300 text-center">
+        נא להזין מספר ישראלי תקין (10 ספרות, מתחיל ב-05)
+      </div>
+    )}
+  </div>
+</div>
+ <button
+  type="button"
+  onClick={() => { if (canSubmit) window.open(waUrl, "_blank", "noopener,noreferrer"); }}
+  disabled={!canSubmit}
+  className={`mt-3 inline-block px-7 py-3 rounded-2xl border-2 text-white text-lg font-bold font-[Assistant] tracking-wide transition
+    ${canSubmit
+      ? "border-orange-500/90 bg-gradient-to-r from-orange-500/20 to-transparent hover:border-orange-400 hover:from-orange-500/30 hover:scale-[1.02] active:scale-95"
+      : "border-orange-500/30 bg-orange-500/10 opacity-50 cursor-not-allowed"
+    }`}
+  aria-disabled={!canSubmit}
+>
+  קבע לי טיפול בולמים
+</button>
 </div>
           </form>
 
