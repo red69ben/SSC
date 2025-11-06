@@ -511,21 +511,26 @@ export default function SSC() {
               />
             </div>
 
-            {/* Rider weight */}
-            <div className="order-6 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">בחר משקל רוכב (ק"ג)</label>
-              <input
-                type="number"
-                min={35}
-                max={140}
-                step={0.5}
-                value={riderKg}
-                onChange={(e) => setRiderKg(Number(e.target.value))}
-                className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
-                
-              />
-            </div>
-            
+           {/* Rider weight */}
+<div className="order-6 lg:col-span-3">
+  <label className="block text-lg text-orange-300 mb-2 text-center font-bold">
+    בחר משקל רוכב (ק"ג)
+  </label>
+  <input
+    type="number"
+    min={35}
+    max={140}
+    step={0.5}
+    value={riderKg === null || riderKg === undefined ? "" : riderKg}
+    onChange={(e) => {
+      const val = e.target.value;
+      setRiderKg(val === "" ? null : Number(val));
+    }}
+    className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
+  />
+</div>
+
+
             {/* Result panel (inside card) */}
             <div className="order-9 lg:col-span-3 text-center">
   <ResultBox
