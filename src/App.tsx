@@ -525,21 +525,7 @@ export default function SSC() {
                 
               />
             </div>
-
-            {/* KM since last service */}
-            <div className="order-8 lg:col-span-3">
-              <label className="block text-lg text-orange-300 mb-2 text-center font-bold">ק"מ מאז הטיפול האחרון</label>
-              <input
-                type="number"
-                min={0}
-                step={1}
-                value={kmSince}
-                onChange={(e) => { const v = e.target.value; const n = v === "" ? 0 : Math.max(0, Math.floor(Number(v))); setKmSince(n); }}
-                className="w-full bg-[#0c0d0d] text-white border border-orange-500/40 rounded-xl px-4 py-3 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-orange-500/60"
-                placeholder="0"
-              />
-            </div>
-
+            
             {/* Result panel (inside card) */}
             <div className="order-9 lg:col-span-3 text-center">
   <ResultBox
